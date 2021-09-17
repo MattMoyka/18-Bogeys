@@ -6,7 +6,7 @@ const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 function App() {
 
   return (
-    <div className="App">
+    <div className="App text-4xl">
       {KEY} : {BASE}
     </div>
   );
