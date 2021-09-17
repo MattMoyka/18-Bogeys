@@ -3,6 +3,10 @@ import { Route } from 'react-router-dom'
 import Newround from './components/Newround'
 import Gamedata from './components/Gamedata'
 import Navbar from './components/Navbar'
+import Homepage from './components/Homepage'
+import Scorecard from './components/Scorecard'
+import Scorecarddisplay from './components/Scorecarddisplay'
+import Scorecardedit from './components/Scorecardedit'
 
 
 function App() {
