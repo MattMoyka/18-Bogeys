@@ -12,7 +12,7 @@ import Scorecardedit from './components/Scorecardedit'
 function App() {
 
   return (
-    <div className="App text-4xl">
+    <div className="App text-4xl h-1vh">
       <Navbar />
 
       <Route exact path='/'>

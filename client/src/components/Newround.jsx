@@ -1,7 +1,9 @@
+import NewroundForm from '../Forms/NewroundForm'
+
 export default function Newround() {
   return (
     <div>
-      NewRound
+      <NewroundForm />
     </div>
   )
 }
