@@ -19,23 +19,23 @@ function App() {
         <Homepage />
       </Route>
 
-      <Route path='/newround'>
+      <Route exact path='/newround'>
         <Newround />
       </Route>
 
-      <Route path='/newround/scorecard'>
+      <Route exact path='/newround/scorecard'>
         <Scorecard />
       </Route>
 
-      <Route path='/gamefeed'>
+      <Route exact path='/gamefeed'>
         <Gamedata />
       </Route>
 
-      <Route path='/gamefeed/:id'>
+      <Route exact path='/gamefeed/:id'>
         <Scorecarddisplay />
       </Route>
 
-      <Route path='/gamefeed/:id/edit'>
+      <Route exact path='/gamefeed/:id/edit'>
         <Scorecardedit />
       </Route>
 
