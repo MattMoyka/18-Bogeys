@@ -27,11 +27,13 @@ export default function Gamedata() {
     <div>
       {games.map(game => {
         return <Link to={`/gamefeed/${game.id}`} key={game.id}>
-          <h3>{game.fields.playerName}</h3>
-          <h4>{game.fields.courseName}</h4>
-          <p>Click to view details</p>
+          <div className=''>
+            <h3>{game.fields.playerName}</h3>
+            <h4>{game.fields.courseName}</h4>
+            <p>Click to view details</p>
+          </div>
         </Link>
       })}
-    </div>
+    </div >
   )
 }
