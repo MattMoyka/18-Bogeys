@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# 18-Bogeys
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Link to project here](https://main--unruffled-haibt-df0e79.netlify.app/)
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+18 Bogeys is a golf round tracker that records various info about your golf game. It will record the course name and par, your name, handicap an the other players you are playing with as well as the date played. In addition you will fill in the scorecard as you play and at the end of the game you will submit it to a global feed.
 
-### `npm start`
+## Wireframes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The wireframes below depict the phone and website view for the app as well as the flowchart to depicte the component Hierarchy. [View the source here.](https://whimsical.com/18-bogeys-MaEEdCsgf13WMQCcW74rcKß)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![imageAlt](https://imgur.com/P8SbGZF.png)
+![imageAlt](https://imgur.com/k2C8BBO.png)
 
-### `npm test`
+## Component Hierarchy
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![imageAlt](https://imgur.com/5TDQWDm.png)
 
-### `npm run build`
+## API and Data Sample
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[View database here!](https://airtable.com/shrpS72muo5RzImLc)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Airtable is returning the data for this base as follows:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+{
+    "records": [
+        {
+            "id": "recpcERi4gK15rKvo",
+            "fields": {
+                "courseName": "Swan Lake",
+                "coursePar": "75",
+                "playerName": "Matt Moyka",
+                "handicap": "-4",
+                "otherPlayers": "Justin",
+                "date": "9/1/2021"
+            },
+            "createdTime": "2021-09-17T13:10:59.000Z"
+        }
+    ],
+    "offset": "recpcERi4gK15rKvo"
+}
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### MVP/PostMVP
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### MVP
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Home page with clickable icons that route to each respective form or data.
+- Get and post golf data from Airtable.
+- Use forms to create game data and update Airtable.
+- edit posts from the game feed through airtable.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### PostMVP
 
-## Learn More
+- add a password bar to allow creator to delete, no secure just like a if(x === x)axios Delete input
+- Add a search bar to search games by name
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Schedule
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Day      | Deliverable                                | Status   |
+| -------- | ------------------------------------------ | -------- |
+| Sept 16,17 | Proposal Approval / Airtable Setup         | in progress |
+| Sept 18-20   | Component Creation / Get, Set, Delete Data | in progress |
+| Oct 21   | finish axios/ finish forms / CSS Components            | in progress |
+| Oct 22   | CSS Components / MVP Complete               | in progress |
+| Oct 23   | Advanced CSS                               | in progress |
+| Oct 24   | Presentations                              | in progress |
 
-### Code Splitting
+## Timeframes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Component                 | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Proposal                  |    H     |      2hrs      |           |         |
+| Airtable setup            |    H     |     .5hrs      |           |          |
+| Netlify           |    H     |      1hrs      |            |          |
+| Data population pg 1      |    H     |      3hrs      |           |         |
+| Data population pg 2      |    H     |      3hrs      |          |         |
+| Data population pg 3      |    H     |      3hrs      |          |         |
+| Data population pg 4      |    H     |      3hrs      |          |         |
+| Data population pg 5      |    H     |      3hrs      |         |         |
+| Form creation pg 1,2        |    H     |      2hrs      |         |        |
+| Form creation pg 3,4        |    H     |      2hrs      |          |        |
+| Data creation/update pg 1 |    H     |      3hrs      |          |         |
+| Data creation/update pg 3 |    H     |      3hrs      |         |          |
+| Component CSS pg 1        |    H     |      3hrs      |          |         |
+| Component CSS pg 2        |    H     |      3hrs      |          |         |
+| Component CSS pg 3        |    H     |      3hrs      |          |         |
+| Component CSS pg 4        |    H     |      3hrs      |          |         |
+| Component CSS pg 5        |    H     |      3hrs      |          |         |
+| Total                     |    H     |    42.5hrs     |          |        |
 
-### Analyzing the Bundle Size
+## SWOT Analysis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Strengths:
 
-### Making a Progressive Web App
+I have a good understanding of what i want my application to look like and what exactly I want it to do. I am also an avid golfer so I feel that I can deliver all the necessary info a golfer would want.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Weaknesses:
 
-### Advanced Configuration
+There is a lot of posting and patching in the app and I am going to have to figure out how to connect it all. For example I have a form that is filled out submitted and then brings the user to another form thats going to add data to the first form.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Opportunities:
 
-### Deployment
+This project will give me a great understanding of react and linking forms and storing data in a no code database. I will also use tailwind CSS for the styling on this project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Threats:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If I run into more errors than anticipated I will not be able to complete all the MVP features I want.
