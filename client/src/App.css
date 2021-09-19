@@ -11,6 +11,11 @@ html{
   pointer-events: none;
 }
 
+.input{
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
