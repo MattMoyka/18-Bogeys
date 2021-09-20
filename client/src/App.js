@@ -23,7 +23,7 @@ function App() {
         <Newround />
       </Route>
 
-      <Route exact path='/newround/scorecard'>
+      <Route exact path='/newround/:id/scorecard'>
         <Scorecard />
       </Route>
 

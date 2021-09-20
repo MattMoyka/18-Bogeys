@@ -1,4 +1,5 @@
 import NewroundForm from '../Forms/NewroundForm'
+import ScorecardForm from '../Forms/ScorecardForm'
 import { useState } from 'react'
 import axios from 'axios'
 import { useHistory, Link } from 'react-router-dom'
@@ -14,14 +15,17 @@ const config = {
   }
 }
 
-export default function Newround(props) {
+export default function Newround() {
   const [courseName, setCourseName] = useState('')
   const [coursePar, setCoursePar] = useState('')
   const [handicap, setHandicap] = useState('')
   const [playerName, setPlayerName] = useState('')
   const [otherPlayers, setOtherPlayers] = useState('')
   const [date, setDate] = useState('')
+  const [id, setId] = useState('')
   const history = useHistory();
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,7 +33,9 @@ export default function Newround(props) {
       courseName, coursePar, handicap, playerName, otherPlayers, date
     }
     const res = await axios.post(URL, { fields }, config);
-    // <Link to={`/gamefeed/${game.id}/edit`} />
+    setId(res.data.id);
+    history?.push(`/newround/${res.data.id}/scorecard`)
+
   }
 
   return (
