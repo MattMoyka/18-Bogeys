@@ -23,6 +23,15 @@ export default function Scorecard() {
   const [seven, setSeven] = useState('')
   const [eight, setEight] = useState('')
   const [nine, setNine] = useState('')
+  const [ten, setTen] = useState('')
+  const [eleven, setEleven] = useState('')
+  const [twelve, setTwelve] = useState('')
+  const [thirteen, setThirteen] = useState('')
+  const [fourteen, setFourteen] = useState('')
+  const [fifteen, setFifteen] = useState('')
+  const [sixteen, setSixteen] = useState('')
+  const [seventeen, setSeventeen] = useState('')
+  const [eighteen, setEighteen] = useState('')
   const { id } = useParams()
 
   // useEffect(() => {
@@ -37,7 +46,7 @@ export default function Scorecard() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
-      one, two, three, four, five, six, seven, eight, nine
+      one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen
     }
     console.log(`${URL}/${id}`)
     console.log(fields)
@@ -66,6 +75,25 @@ export default function Scorecard() {
         setEight={setEight}
         nine={nine}
         setNine={setNine}
+        ten={ten}
+        setTen={setTen}
+        eleven={eleven}
+        setEleven={setEleven}
+        twelve={twelve}
+        setTwelve={setTwelve}
+        thirteen={thirteen}
+        setThirteen={setThirteen}
+        fourteen={fourteen}
+        setFourteen={setFourteen}
+        fifteen={fifteen}
+        setFifteen={setFifteen}
+        sixteen={sixteen}
+        setSixteen={setSixteen}
+        seventeen={seventeen}
+        setSeventeen={setSeventeen}
+        eighteen={eighteen}
+        setEighteen={setEighteen}
+
         handleSubmit={handleSubmit}
       />
     </div>
