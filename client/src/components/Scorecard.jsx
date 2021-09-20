@@ -1,5 +1,7 @@
 import ScorecardForm from "../Forms/ScorecardForm"
 import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { axios } from 'axios'
 
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const airTableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -20,8 +22,17 @@ export default function Scorecard() {
   const [seven, setSeven] = useState('')
   const [eight, setEight] = useState('')
   const [nine, setNine] = useState('')
+  const { id } = useParams()
 
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const fields = {
+      one, two, three, four, five, six, seven, eight, nine
+    }
+    console.log(`${URL}/${id}`)
+    console.log(fields)
+    const res = await axios.patch(`${URL}/${id}`, { fields }, config);
+  }
 
   return (
     <div>
@@ -44,6 +55,7 @@ export default function Scorecard() {
         setEight={setEight}
         nine={nine}
         setNine={setNine}
+        handleSubmit={handleSubmit}
       />
     </div>
   )
