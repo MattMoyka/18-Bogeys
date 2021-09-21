@@ -11,6 +11,7 @@ import Scorecarddisplay from './components/Scorecarddisplay'
 function App() {
 
   return (
+
     <div className="App text-4xl h-1vh">
       <Navbar />
 
@@ -37,6 +38,7 @@ function App() {
       <Route exact path='/gamefeed/:id/edit'>
         <Scorecard />
       </Route>
+
 
     </div>
   );
