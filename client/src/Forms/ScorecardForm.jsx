@@ -6,6 +6,7 @@ export default function ScorecardForm(props) {
   return (
     <form onSubmit={props.handleSubmit}>
       <div className="grid grid-cols-9 grid-rows-2 text-base justify-items-start m-10 p-5 border-4 border-black bg-green-200 rounded-xl">
+
         <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
 
 

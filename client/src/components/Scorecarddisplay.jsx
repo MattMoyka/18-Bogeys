@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
+import CurrentGame from './CurrentGame'
+import ScorecardForm from '../Forms/ScorecardForm'
 
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const airTableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -29,14 +31,16 @@ export default function Scorecarddisplay() {
 
 
   return (
-    <div>
-      <h1>{game.fields?.playerName}</h1>
+    <div className="">
+      {/* <h1>{game.fields?.playerName}</h1>
       <h1>{game.fields?.courseName}</h1>
       <h1>{game.fields?.date}</h1>
       <h1>Played with: {game.fields?.otherPlayers}</h1>
       <h1>Course par: {game.fields?.coursePar}</h1>
       <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
-      <Link to={`${game.id}/edit`}><button>Edit Game</button></Link>
+      <Link to={`${game.id}/edit`}><button>Edit Game</button></Link> */}
+      <CurrentGame />
+      <ScorecardForm />
     </div>
   )
 }

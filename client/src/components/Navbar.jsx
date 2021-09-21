@@ -7,7 +7,6 @@ export default function Navbar() {
         <Link to='/' className='text-xl'>18 Bogeys</Link>
       </div>
       <nav className='flex flex-col text-justify text-base'>
-        <Link to='/'>Home</Link>
         <Link to='/newround'>Start a Round</Link>
         <Link to='/gamefeed'>Game Data</Link>
       </nav>
