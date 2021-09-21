@@ -6,7 +6,6 @@ import Navbar from './components/Navbar'
 import Homepage from './components/Homepage'
 import Scorecard from './components/Scorecard'
 import Scorecarddisplay from './components/Scorecarddisplay'
-import Scorecardedit from './components/Scorecardedit'
 
 
 function App() {

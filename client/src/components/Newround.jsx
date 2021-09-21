@@ -1,8 +1,7 @@
 import NewroundForm from '../Forms/NewroundForm'
-import ScorecardForm from '../Forms/ScorecardForm'
 import { useState } from 'react'
 import axios from 'axios'
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -22,7 +21,6 @@ export default function Newround() {
   const [playerName, setPlayerName] = useState('')
   const [otherPlayers, setOtherPlayers] = useState('')
   const [date, setDate] = useState('')
-  const [id, setId] = useState('')
   const history = useHistory();
 
 
@@ -33,7 +31,6 @@ export default function Newround() {
       courseName, coursePar, handicap, playerName, otherPlayers, date
     }
     const res = await axios.post(URL, { fields }, config);
-    setId(res.data.id);
     history?.push(`/newround/${res.data.id}/scorecard`)
 
   }
