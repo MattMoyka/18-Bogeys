@@ -12,35 +12,41 @@ function App() {
 
   return (
 
-    <div className="App text-4xl h-1vh">
-      <Navbar />
+    <div className="App " data-theme="dracula">
+
 
       <Route exact path='/'>
         <Homepage />
       </Route>
 
       <Route exact path='/newround'>
+        <Navbar />
         <Newround />
       </Route>
 
       <Route exact path='/newround/:id/scorecard'>
+        <Navbar />
         <Scorecard />
       </Route>
 
       <Route exact path='/gamefeed'>
+        <Navbar />
         <Gamedata />
       </Route>
 
       <Route exact path='/gamefeed/:id'>
+        <Navbar />
         <Scorecarddisplay />
       </Route>
 
       <Route exact path='/gamefeed/:id/edit'>
+        <Navbar />
         <Scorecard />
       </Route>
 
 
     </div>
+
   );
 }
 
