@@ -22,6 +22,7 @@ export default function CurrentGame() {
       setGame(res.data);
     }
     fetchGame()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 

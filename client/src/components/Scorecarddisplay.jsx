@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const airTableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const URL = `https://api.airtable.com/v0/${airTableBase}/golf`
-console.log(URL);
 const config = {
   headers: {
     Authorization: `Bearer ${airTableKey}`
@@ -25,6 +24,7 @@ export default function Scorecarddisplay() {
       setGame(res.data);
     }
     fetchGame();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
