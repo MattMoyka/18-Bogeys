@@ -21,6 +21,7 @@ export default function Newround() {
   const [playerName, setPlayerName] = useState('')
   const [otherPlayers, setOtherPlayers] = useState('')
   const [date, setDate] = useState('')
+  const [password, setPassword] = useState('')
   const history = useHistory();
 
 
@@ -50,6 +51,8 @@ export default function Newround() {
         setOtherPlayers={setOtherPlayers}
         date={date}
         setDate={setDate}
+        password={password}
+        setPassword={setPassword}
         handleSubmit={handleSubmit}
       />
     </div>
