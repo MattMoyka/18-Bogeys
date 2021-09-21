@@ -27,7 +27,7 @@ export default function Gamedata() {
     <div>
       {games.map(game => {
         return <Link to={`/gamefeed/${game.id}`} key={game.id}>
-          <div className='flex flex-col justify-evenly bg-green-400 border-black gap-2 m-5 rounded-xl text-sm'>
+          <div className='flex flex-col justify-evenly bg-gray-500 hover:bg-green-900 shadow-2xl border-black gap-1 m-5 rounded-xl text-sm'>
             <h3>{game.fields.playerName}</h3>
             <h4>{game.fields.courseName}</h4>
             <p>Click to view details</p>

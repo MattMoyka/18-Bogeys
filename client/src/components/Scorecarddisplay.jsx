@@ -31,14 +31,14 @@ export default function Scorecarddisplay() {
 
 
   return (
-    <div className="">
+    <div className="flex flex-col gap-1 text-lg bg bg-gray-500 shadow-2xl rounded-xl m-10 py-5">
       <h1>{game.fields?.playerName}</h1>
       <h1>{game.fields?.courseName}</h1>
       <h1>{game.fields?.date}</h1>
       <h1>Played with: {game.fields?.otherPlayers}</h1>
       <h1>Course par: {game.fields?.coursePar}</h1>
       <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
-      <Link to={`${game.id}/edit`}><button>Edit Game</button></Link>
+      <Link to={`${game.id}/edit`} ><button className='btn btn-accent btn-active' role="button" aria-pressed="true">Edit Game</button></Link>
     </div>
   )
 }

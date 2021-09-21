@@ -27,7 +27,7 @@ export default function CurrentGame() {
 
 
   return (
-    <div className='flex flex-col text-lg m-10 text-black bg-green-200 border-black border-4 rounded-lg shadow-2xl'>
+    <div className='flex flex-col text-lg m-10 bg-gray-500 border-black border-4 rounded-lg shadow-2xl'>
       <h1>{game.fields?.playerName}</h1>
       <h1>{game.fields?.courseName}</h1>
       <h1>{game.fields?.date}</h1>
