@@ -39,7 +39,7 @@ export default function Newround() {
   }
 
   return (
-    <div>
+    <div className="h-screen">
       <NewroundForm
         courseName={courseName}
         setCourseName={setCourseName}

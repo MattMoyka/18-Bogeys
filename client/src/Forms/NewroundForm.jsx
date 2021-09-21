@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function NewroundForm(props) {
   return (
-    <form onSubmit={props.handleSubmit} className="flex flex-col flex-nowrap items-center text-lg bg-black">
+    <form onSubmit={props.handleSubmit} className="flex flex-col flex-nowrap items-center text-lg bg-black h-screen">
       <div className='flex items-center bg-green-600  rounded-t-lg border-green-500 mt-10 w-50'>
         <label className=' w-20 text-right p-4 mr-8 text-green-200'>Course Name:</label>
         <input

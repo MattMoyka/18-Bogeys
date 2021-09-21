@@ -36,7 +36,7 @@ function App() {
       </Route>
 
       <Route exact path='/gamefeed/:id/edit'>
-        <Scorecardedit />
+        <Scorecard />
       </Route>
 
     </div>

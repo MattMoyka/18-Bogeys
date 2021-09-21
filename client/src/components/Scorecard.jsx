@@ -2,6 +2,7 @@ import ScorecardForm from "../Forms/ScorecardForm"
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import CurrentGame from "./CurrentGame"
 
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const airTableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -34,14 +35,6 @@ export default function Scorecard() {
   const [eighteen, setEighteen] = useState('')
   const { id } = useParams()
 
-  // useEffect(() => {
-  //   const fetchGames = async () => {
-  //     const res = await axios.get(URL, config);
-  //     console.log(res.data.records);
-  //   }
-  //   fetchGames()
-  // }, [])
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,8 +47,10 @@ export default function Scorecard() {
     console.log(res1.data)
   }
 
+
   return (
     <div>
+      <CurrentGame />
       <ScorecardForm
         one={one}
         setOne={setOne}
