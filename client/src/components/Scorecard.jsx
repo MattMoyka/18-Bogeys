@@ -75,7 +75,7 @@ export default function Scorecard() {
 
 
   return (
-    <div className='h-screen pt-10 px-4 mt-0 bg-gradient-to-tr from-blue-500  via-blue-300 via-white'>
+    <div className=' flex flex-col items-center h-screen pt-10 px-4 mt-0 bg-gradient-to-tr from-blue-500  via-blue-300 via-white'>
       <CurrentGame />
       <ScorecardForm
         one={one}

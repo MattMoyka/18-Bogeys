@@ -22,8 +22,9 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    background: 'black',
-    height: '70%'
+    background: 'white',
+    height: 'auto',
+    width: '90%'
   },
 };
 Modal.setAppElement('#root');
@@ -69,10 +70,10 @@ export default function Gamedata() {
     //     </Link>
     //   })}
     // </div >
-    <div className='bg-gradient-to-tr from-blue-500  via-blue-300 via-white'>
+    <div className='bg-gradient-to-tr from-blue-500  via-blue-300 via-white pt-5 h-screen'>
       {games.map(game => {
         return (
-          <div className='flex flex-col justify-evenly bg-gray-500 hover:bg-green-900 shadow-2xl border-black gap-1 m-5 rounded-xl text-sm'>
+          <div className='flex flex-col justify-evenly bg-gray-500 hover:bg-green-900 shadow-2xl border-black gap-1 mb-5 mx-5 rounded-xl text-sm'>
             <h3>{game.fields.playerName}</h3>
             <h4>{game.fields.courseName}</h4>
             <button onClick={openModal} id={game.id}>Click to view details</button>
