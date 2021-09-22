@@ -19,6 +19,7 @@ const config = {
 export default function Scorecarddisplay() {
   const [game, setGame] = useState('')
   const { id } = useParams()
+  const [passwordInput, setPasswordInput] = useState('')
 
   useEffect(() => {
     const fetchGame = async () => {
@@ -38,7 +39,11 @@ export default function Scorecarddisplay() {
       <h1>Played with: {game.fields?.otherPlayers}</h1>
       <h1>Course par: {game.fields?.coursePar}</h1>
       <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
-      <Link to={`${game.id}/edit`} ><button className='btn btn-accent btn-active' role="button" aria-pressed="true">Edit Game</button></Link>
+      if ({game.fields?.password} === {passwordInput}) {
+        <Link to={`${game.id}/edit`} ><button className='btn btn-accent btn-active' role="button" aria-pressed="true">Edit Game</button></Link>
+      } else {
+        alert('wrong password')
+      }
     </div>
   )
 }

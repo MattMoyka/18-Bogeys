@@ -51,6 +51,14 @@ export default function NewroundForm(props) {
           value={props.date}
           onChange={(e) => props.setDate(e.target.value)} />
       </div>
+      <div className="form-control">
+        <label className="label">Edit Password:</label>
+        <input
+          className="input input-success input-bordered w-60"
+          type='text'
+          value={props.password}
+          onChange={(e) => props.setPassword(e.target.value)} />
+      </div>
       <button className='text-white w-64 h-12 bg-green-600 my-5 rounded-lg'>Start Round</button>
     </form >
   )

@@ -10,7 +10,7 @@ export default function ScorecardForm(props) {
           <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
         </div>
         <div className='flex justify-evenly'>
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.one} onChange={e => props.setOne(e.target.value)} />
+          <input className='w-7 border-4 border-black text-black' autoFocus type='text' value={props?.one} onChange={e => props.setOne(e.target.value)} />
           <input className='w-7 border-4 border-black text-black' type='text' value={props?.two} onChange={e => props.setTwo(e.target.value)} />
           <input className='w-7 border-4 border-black text-black' type='text' value={props?.three} onChange={e => props.setThree(e.target.value)} />
           <input className='w-7 border-4 border-black text-black' type='text' value={props?.four} onChange={e => props.setFour(e.target.value)} />
