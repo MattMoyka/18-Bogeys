@@ -90,4 +90,4 @@ export default function Gamedata() {
       </Modal>
     </div >
   )
-}
+};
