@@ -31,19 +31,22 @@ export default function Scorecarddisplay() {
   }, []);
 
 
+
+
+
   return (
-    <div className="flex flex-col gap-1 text-lg bg bg-gray-500 shadow-2xl rounded-xl m-10 py-5">
+    <div className="flex flex-col items-center gap-1 text-lg bg bg-gray-500 shadow-2xl rounded-xl m-10 py-5">
       <h1>{game.fields?.playerName}</h1>
       <h1>{game.fields?.courseName}</h1>
       <h1>{game.fields?.date}</h1>
       <h1>Played with: {game.fields?.otherPlayers}</h1>
       <h1>Course par: {game.fields?.coursePar}</h1>
       <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
-      if ({game.fields?.password} === {passwordInput}) {
-        <Link to={`${game.id}/edit`} ><button className='btn btn-accent btn-active' role="button" aria-pressed="true">Edit Game</button></Link>
-      } else {
-        alert('wrong password')
-      }
+
+      <input type='text' className='input input-success input-bordered w-10/12 mt-5 text-center' placeholder='Enter password here to edit' onChange={e => setPasswordInput(e.target.value)} />
+      {(game.fields?.password === passwordInput) ?
+        <Link to={`${game.id}/edit`} className='btn btn-accent btn-active' role="button" aria-pressed="true">Edit Game</Link> : <div></div>}
+
     </div>
   )
 }

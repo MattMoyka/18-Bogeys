@@ -29,7 +29,7 @@ export default function Newround() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
-      courseName, coursePar, handicap, playerName, otherPlayers, date
+      courseName, coursePar, handicap, playerName, otherPlayers, date, password
     }
     const res = await axios.post(URL, { fields }, config);
     history?.push(`/newround/${res.data.id}/scorecard`)

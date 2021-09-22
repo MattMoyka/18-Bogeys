@@ -45,7 +45,7 @@ export default function Homepage() {
           onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           style={customStyles}
-          contentLabel="Example Modal"
+          contentLabel="Modal"
         >
           <Newround />
         </Modal>
