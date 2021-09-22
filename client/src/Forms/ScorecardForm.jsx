@@ -4,8 +4,9 @@
 export default function ScorecardForm(props) {
 
   return (
-    <form onSubmit={props.handleSubmit}>
-      <div className="flex flex-col">
+    <form onSubmit={props.handleSubmit} className=" flex flex-col gap-4 items-center">
+      <div className="flex flex-col border-2 border-black w-11/12">
+        <div>Front Nine</div>
         <table className='table-auto'>
           <thead>
             <tr>
@@ -27,6 +28,7 @@ export default function ScorecardForm(props) {
             </tr>
           </tbody>
         </table>
+        <div className="mt-5">Back Nine</div>
         <table className='table-auto'>
           <thead>
             <tr>
@@ -48,7 +50,7 @@ export default function ScorecardForm(props) {
           </tbody>
         </table>
       </div>
-      <button>save score card</button>
+      <button className="btn btn-outline btn-primary">save score card</button>
     </form>
   )
 }

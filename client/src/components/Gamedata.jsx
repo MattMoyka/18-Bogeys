@@ -69,7 +69,7 @@ export default function Gamedata() {
     //     </Link>
     //   })}
     // </div >
-    <div>
+    <div className='bg-gradient-to-tr from-blue-500  via-blue-300 via-white'>
       {games.map(game => {
         return (
           <div className='flex flex-col justify-evenly bg-gray-500 hover:bg-green-900 shadow-2xl border-black gap-1 m-5 rounded-xl text-sm'>
@@ -90,4 +90,4 @@ export default function Gamedata() {
       </Modal>
     </div >
   )
-};
+}

@@ -70,15 +70,12 @@ export default function Scorecard() {
     const fields = {
       one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen
     }
-    console.log(`${URL}/${id}`)
-    console.log(fields)
     const res1 = await axios.patch(`${URL}/${id}`, { fields }, config);
-    console.log(res1.data)
   }
 
 
   return (
-    <div>
+    <div className='h-screen pt-10 px-4 mt-0 bg-gradient-to-tr from-blue-500  via-blue-300 via-white'>
       <CurrentGame />
       <ScorecardForm
         one={one}

@@ -13,7 +13,7 @@ function App() {
 
   return (
 
-    <div className="App " data-theme="dracula">
+    <div className="App">
 
 
       <Route exact path='/'>
