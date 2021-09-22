@@ -6,34 +6,47 @@ export default function ScorecardForm(props) {
   return (
     <form onSubmit={props.handleSubmit}>
       <div className="flex flex-col">
-        <div className='flex justify-evenly'>
-          <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
-        </div>
-        <div className='flex justify-evenly'>
-          <input className='w-7 border-4 border-black text-black' autoFocus type='text' value={props?.one} onChange={e => props.setOne(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.two} onChange={e => props.setTwo(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.three} onChange={e => props.setThree(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.four} onChange={e => props.setFour(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.five} onChange={e => props.setFive(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.six} onChange={e => props.setSix(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.seven} onChange={e => props.setSeven(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.eight} onChange={e => props.setEight(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.nine} onChange={e => props.setNine(e.target.value)} />
-        </div>
-        <div className='flex justify-evenly'>
-          <div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
-        </div>
-        <div className='flex justify-evenly'>
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.ten} onChange={e => props.setTen(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.eleven} onChange={e => props.setEleven(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.twelve} onChange={e => props.setTwelve(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.thirteen} onChange={e => props.setThirteen(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.fourteen} onChange={e => props.setFourteen(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.fifteen} onChange={e => props.setFifteen(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.sixteen} onChange={e => props.setSixteen(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.seventeen} onChange={e => props.setSeventeen(e.target.value)} />
-          <input className='w-7 border-4 border-black text-black' type='text' value={props?.eighteen} onChange={e => props.setEighteen(e.target.value)} />
-        </div>
+        <table className='table-auto'>
+          <thead>
+            <tr>
+              <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><input className='w-7 border-4 border-black text-black text-center' autoFocus type='text' value={props?.one} onChange={e => props.setOne(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.two} onChange={e => props.setTwo(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.three} onChange={e => props.setThree(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.four} onChange={e => props.setFour(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.five} onChange={e => props.setFive(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.six} onChange={e => props.setSix(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.seven} onChange={e => props.setSeven(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.eight} onChange={e => props.setEight(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.nine} onChange={e => props.setNine(e.target.value)} /></td>
+            </tr>
+          </tbody>
+        </table>
+        <table className='table-auto'>
+          <thead>
+            <tr>
+              <th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.ten} onChange={e => props.setTen(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.eleven} onChange={e => props.setEleven(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.twelve} onChange={e => props.setTwelve(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.thirteen} onChange={e => props.setThirteen(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.fourteen} onChange={e => props.setFourteen(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.fifteen} onChange={e => props.setFifteen(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.sixteen} onChange={e => props.setSixteen(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.seventeen} onChange={e => props.setSeventeen(e.target.value)} /></td>
+              <td><input className='w-7 border-4 border-black text-black text-center' type='text' value={props?.eighteen} onChange={e => props.setEighteen(e.target.value)} /></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <button>save score card</button>
     </form>

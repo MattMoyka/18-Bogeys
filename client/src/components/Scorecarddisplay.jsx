@@ -16,21 +16,22 @@ const config = {
 
 
 
-export default function Scorecarddisplay() {
+export default function Scorecarddisplay(props) {
   const [game, setGame] = useState('')
   const { id } = useParams()
   const [passwordInput, setPasswordInput] = useState('')
 
   useEffect(() => {
     const fetchGame = async () => {
-      const res = await axios.get(`${URL}/${id}`, config)
+      const res = await axios.get(`${URL}/${props?.gameId}`, config)
       setGame(res.data);
+      console.log(res.data)
     }
     fetchGame();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-
+  console.log(props)
 
 
 
@@ -45,7 +46,7 @@ export default function Scorecarddisplay() {
 
       <input type='text' className='input input-success input-bordered w-10/12 mt-5 text-center' placeholder='Enter password here to edit' onChange={e => setPasswordInput(e.target.value)} />
       {(game.fields?.password === passwordInput) ?
-        <Link to={`${game.id}/edit`} className='btn btn-accent btn-active' role="button" aria-pressed="true">Edit Game</Link> : <div></div>}
+        <Link to={`gamefeed/${game.id}/edit`} className='btn btn-accent btn-active' role="button" aria-pressed="true">Edit Game</Link> : <div></div>}
 
     </div>
   )

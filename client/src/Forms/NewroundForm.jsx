@@ -2,7 +2,7 @@
 
 export default function NewroundForm(props) {
   return (
-    <form onSubmit={props.handleSubmit} className="flex flex-col flex-nowrap items-center text-lg  h-screen">
+    <form onSubmit={props.handleSubmit} className="flex flex-col flex-nowrap items-center text-lg  h-screen bg-gradient-to-tr from-blue-500  via-blue-300 via-white">
       <div className='form-control'>
         <label className='label'>Course Name:</label>
         <input
