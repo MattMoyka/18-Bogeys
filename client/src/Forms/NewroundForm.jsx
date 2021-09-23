@@ -6,7 +6,7 @@ export default function NewroundForm(props) {
       <div className='form-control'>
         <label className='label'>Course Name*:</label>
         <input
-          className="input input-success input-bordered w-60"
+          className="input input-success input-bordered w-60 text-black"
           type='text'
           value={props.courseName}
           onChange={(e) => props.setCourseName(e.target.value)} />
@@ -34,6 +34,7 @@ export default function NewroundForm(props) {
           type='text'
           value={props.playerName}
           onChange={(e) => props.setPlayerName(e.target.value)} />
+
       </div>
       <div className="form-control">
         <label className="label">Other Players:</label>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Modal from 'react-modal'
+import SearchGameReturn from './SearchGameReturn';
 
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const airTableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -30,6 +31,8 @@ Modal.setAppElement('#root');
 export default function SearchGames() {
   const [games, setGames] = useState([])
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [gameId, setGameId] = useState('')
+  const [searchInput, setSearchInput] = useState('')
 
   function openModal(e) {
     setIsOpen(true);
@@ -59,8 +62,8 @@ export default function SearchGames() {
 
   return (
     <div className='flex flex-row mb-5 justify-center gap-3'>
-      <input className='border-2 border-black text-black px-3' placeholder='Input player name'></input>
-      <button className='btn btn-secondary'>Search</button>
+      <input className='border-2 border-black text-black px-3' placeholder='Input player name' onChange={e => setSearchInput(e.target.value)}></input>
+      <button className='btn btn-secondary' onClick={openModal}>Search</button>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
@@ -68,7 +71,7 @@ export default function SearchGames() {
         style={customStyles}
         contentLabel="Modal"
       >
-        {/* <SearchGameReturn gameId={gameId} /> */}
+        <SearchGameReturn gameId={gameId} games={games} openModal={openModal} searchInput={searchInput} />
 
       </Modal>
     </div>
