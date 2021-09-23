@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 import Modal from 'react-modal'
 import Scorecarddisplay from './Scorecarddisplay';
+import SearchGames from './SearchGames';
 
 
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -62,6 +63,7 @@ export default function Gamedata() {
   return (
 
     <div className='bg-white pt-5 h-screen'>
+      <SearchGames />
       <div className='grid grid-cols-2'>
         {games.map(game => {
           return (
