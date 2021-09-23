@@ -75,7 +75,6 @@ export default function Scorecard() {
   }
 
 
-
   return (
     <div className=' flex flex-col items-center h-screen pt-10 px-4 mt-0'>
       <CurrentGame />
