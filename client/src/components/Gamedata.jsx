@@ -45,6 +45,7 @@ export default function Gamedata() {
 
   function openModal(e) {
     setGameId(e.target.id);
+    console.log(e.target)
     setIsOpen(true);
 
   }
@@ -70,16 +71,21 @@ export default function Gamedata() {
     //     </Link>
     //   })}
     // </div >
-    <div className='bg-gradient-to-tr from-blue-500  via-blue-300 via-white pt-5 h-screen'>
-      {games.map(game => {
-        return (
-          <div className='flex flex-col justify-evenly bg-gray-100 hover:bg-green-900 shadow-2xl border-black gap-1 mb-5 mx-5 rounded-xl text-sm'>
-            <h3>{game.fields.playerName}</h3>
-            <h4>{game.fields.courseName}</h4>
-            <button onClick={openModal} id={game.id}>Click to view details</button>
-          </div>
-        )
-      })}
+    <div className='bg-white pt-5 h-screen'>
+      <div className='grid grid-cols-2'>
+        {games.map(game => {
+          return (
+
+            <a onClick={openModal} id={game.id}>
+              <div id={game.id} className=' bg-gray-100 hover:bg-green-900 shadow-2xl border-black gap-1 mb-5 mx-5 border-2 rounded-xl text-sm'>
+                <h3 id={game.id}>{game.fields.playerName}</h3>
+                <h4 id={game.id}>{game.fields.courseName}</h4>
+                <div id={game.id}>{game.fields.date}</div>
+              </div>
+            </a>
+
+          )
+        })}</div>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}

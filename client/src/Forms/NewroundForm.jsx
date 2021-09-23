@@ -2,9 +2,9 @@
 
 export default function NewroundForm(props) {
   return (
-    <form onSubmit={props.handleSubmit} className="flex flex-col flex-nowrap items-center text-lg  h-screen bg-gradient-to-tr from-blue-500  via-blue-300 via-white">
+    <form onSubmit={props.handleSubmit} className="flex flex-col flex-nowrap items-center text-lg  h-screen bg-white">
       <div className='form-control'>
-        <label className='label'>Course Name:</label>
+        <label className='label'>Course Name*:</label>
         <input
           className="input input-success input-bordered w-60"
           type='text'
@@ -12,7 +12,7 @@ export default function NewroundForm(props) {
           onChange={(e) => props.setCourseName(e.target.value)} />
       </div>
       <div className='form-control'>
-        <label className='label'>Course Par:</label>
+        <label className='label'>Course Par*:</label>
         <input
           className="input input-success input-bordered w-60"
           type='text'
@@ -28,7 +28,7 @@ export default function NewroundForm(props) {
           onChange={(e) => props.setHandicap(e.target.value)} />
       </div>
       <div className='form-control'>
-        <label className='label'>Player Name:</label>
+        <label className='label'>Player Name*:</label>
         <input
           className="input input-success input-bordered w-60"
           type='text'
@@ -44,7 +44,7 @@ export default function NewroundForm(props) {
           onChange={(e) => props.setOtherPlayers(e.target.value)} />
       </div>
       <div className="form-control">
-        <label className="label">Date:</label>
+        <label className="label">Date*:</label>
         <input
           className="input input-success input-bordered w-60"
           type='text'
@@ -52,13 +52,14 @@ export default function NewroundForm(props) {
           onChange={(e) => props.setDate(e.target.value)} />
       </div>
       <div className="form-control">
-        <label className="label">Edit Password:</label>
+        <label className="label">Password*:</label>
         <input
           className="input input-success input-bordered w-60"
           type='text'
           value={props.password}
           onChange={(e) => props.setPassword(e.target.value)} />
       </div>
+      <p className='text-xs mt-3'>*Required Field</p>
       <button className='text-white w-64 h-12 bg-green-600 my-5 rounded-lg'>Start Round</button>
     </form >
   )
