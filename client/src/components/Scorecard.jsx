@@ -73,7 +73,7 @@ export default function Scorecard() {
 
     }
     fetchGame();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [])
 
 
