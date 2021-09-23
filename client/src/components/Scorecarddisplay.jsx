@@ -21,8 +21,8 @@ export default function Scorecarddisplay(props) {
   useEffect(() => {
     const fetchGame = async () => {
       const res = await axios.get(`${URL}/${props?.gameId}`, config)
-      setGame(res.data);
-      console.log(res.data)
+      setGame(res?.data);
+      console.log('is this the object' + res.data)
     }
     fetchGame();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -43,7 +43,7 @@ export default function Scorecarddisplay(props) {
       <ScorecardModal gameId={props?.gameId} />
       <input type='password' className='input input-success input-bordered w-10/12 mt-5 text-xxl text-center' placeholder='Enter password here to edit' onChange={e => setPasswordInput(e.target.value)} />
       {(game.fields?.password === passwordInput) ?
-        <Link to={`gamefeed/${game.id}/edit`} className='btn btn-secondary btn-active' role="button" aria-pressed="true">Edit Game</Link> : <div></div>}
+        <Link to={`gamefeed/${game?.id}/edit`} className='btn btn-secondary btn-active' role="button" aria-pressed="true">Edit Game</Link> : <div></div>}
 
     </div>
   )
