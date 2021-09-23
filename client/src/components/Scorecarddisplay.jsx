@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
-import CurrentGame from './CurrentGame'
-import ScorecardForm from '../Forms/ScorecardForm'
+
 
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const airTableBase = process.env.REACT_APP_AIRTABLE_BASE;
