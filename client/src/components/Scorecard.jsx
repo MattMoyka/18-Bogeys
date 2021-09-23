@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import CurrentGame from "./CurrentGame"
 import { useEffect } from "react/cjs/react.development"
+import DeleteGame from "./DeleteGame"
 
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const airTableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -74,8 +75,9 @@ export default function Scorecard() {
   }
 
 
+
   return (
-    <div className=' flex flex-col items-center h-screen pt-10 px-4 mt-0 bg-gradient-to-tr from-blue-500  via-blue-300 via-white'>
+    <div className=' flex flex-col items-center h-screen pt-10 px-4 mt-0'>
       <CurrentGame />
       <ScorecardForm
         one={one}
@@ -117,6 +119,7 @@ export default function Scorecard() {
 
         handleSubmit={handleSubmit}
       />
+      <DeleteGame />
     </div>
   )
 }
