@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import ScorecardModal from './ScorecardModal'
 
@@ -17,7 +16,6 @@ const config = {
 
 export default function Scorecarddisplay(props) {
   const [game, setGame] = useState('')
-  const { id } = useParams()
   const [passwordInput, setPasswordInput] = useState('')
 
   useEffect(() => {
@@ -30,7 +28,7 @@ export default function Scorecarddisplay(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(props)
+
 
 
 
@@ -39,7 +37,7 @@ export default function Scorecarddisplay(props) {
       <h1>{game.fields?.playerName}</h1>
       <h1>{game.fields?.courseName}</h1>
       <h1>{game.fields?.date}</h1>
-      <h1>Played with: {game.fields?.otherPlayers}</h1>
+      {(game.fields?.otherPlayers !== undefined) ? <h1>Played with: {game.fields?.otherPlayers}</h1> : null}
       <h1>Course par: {game.fields?.coursePar}</h1>
       <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
       <ScorecardModal gameId={props?.gameId} />

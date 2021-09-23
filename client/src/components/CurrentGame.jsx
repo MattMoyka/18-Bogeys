@@ -12,7 +12,7 @@ const config = {
   }
 }
 
-export default function CurrentGame() {
+export default function CurrentGame(props) {
   const { id } = useParams();
   const [game, setGame] = useState([])
 
@@ -23,7 +23,7 @@ export default function CurrentGame() {
     }
     fetchGame()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [props.toggle])
 
 
   return (
@@ -31,7 +31,7 @@ export default function CurrentGame() {
       <h1>{game.fields?.playerName}</h1>
       <h1>{game.fields?.courseName}</h1>
       <h1>{game.fields?.date}</h1>
-      <h1>Played with: {game.fields?.otherPlayers}</h1>
+      {(game.fields?.otherPlayers !== undefined) ? <h1>Played with: {game.fields?.otherPlayers}</h1> : null}
       <h1>Course par: {game.fields?.coursePar}</h1>
       <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
     </div>

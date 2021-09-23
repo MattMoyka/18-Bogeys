@@ -43,7 +43,7 @@ export default function DeleteGame(props) {
     setIsOpen(false)
   }
 
-  console.log(id);
+
   async function handleDelete() {
 
     let res = await axios.delete(`${URL}/${id}`, config);

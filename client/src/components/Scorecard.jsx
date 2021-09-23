@@ -36,6 +36,16 @@ export default function Scorecard() {
   const [seventeen, setSeventeen] = useState('')
   const [eighteen, setEighteen] = useState('')
   const { id } = useParams()
+  const [toggle, setToggle] = useState(false)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const fields = {
+      one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen
+    }
+    const res1 = await axios.patch(`${URL}/${id}`, { fields }, config);
+    setToggle(!toggle)
+  }
 
   useEffect(() => {
     const fetchGame = async () => {
@@ -66,18 +76,11 @@ export default function Scorecard() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const fields = {
-      one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen
-    }
-    const res1 = await axios.patch(`${URL}/${id}`, { fields }, config);
-  }
 
 
   return (
     <div className=' flex flex-col items-center h-screen pt-10 px-4 mt-0'>
-      <CurrentGame />
+      <CurrentGame toggle={toggle} />
       <ScorecardForm
         one={one}
         setOne={setOne}

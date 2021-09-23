@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Modal from 'react-modal'
 import { useState } from 'react'
 // import HomepagePopup from './HomepagePopup'
-import Newround from './Newround'
+
 
 const customStyles = {
   content: {
@@ -39,7 +39,7 @@ export default function Homepage() {
         <Link to='/gamefeed'><button className="btn glass text-white text-xl w-52 h-20">Game Data</button></Link>
       </div>
       <div>
-        <button onClick={openModal}>Open Modal</button>
+        <button onClick={openModal}>Placeholder</button>
         <Modal
           isOpen={modalIsOpen}
           onAfterOpen={afterOpenModal}
@@ -47,7 +47,7 @@ export default function Homepage() {
           style={customStyles}
           contentLabel="Modal"
         >
-          <Newround />
+
         </Modal>
       </div>
     </div>
