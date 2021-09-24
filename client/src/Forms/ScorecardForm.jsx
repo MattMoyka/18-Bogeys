@@ -5,7 +5,7 @@ export default function ScorecardForm(props) {
 
   return (
     <form onSubmit={props.handleSubmit} className=" flex flex-col gap-4 items-center">
-      <div className="flex flex-col border-2 border-black bg-gray-100 rounded-xl p-3">
+      <div className="flex flex-col border-2 border-black bg-blue-100 rounded-xl p-3">
         <div className='text-2xl'>Front Nine</div>
         <table className='table-auto'>
           <thead>
@@ -25,7 +25,7 @@ export default function ScorecardForm(props) {
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.seven} onChange={e => props.setSeven(e.target.value)} /></td>
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.eight} onChange={e => props.setEight(e.target.value)} /></td>
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.nine} onChange={e => props.setNine(e.target.value)} /></td>
-              <td><div className='w-7 border-2 border-black text-black text-center' type='number'>{props?.o}</div></td>
+              <td><div className='w-7 border-2 border-black text-black bg-white text-center' type='number'>{props?.o}</div></td>
             </tr>
           </tbody>
         </table>
@@ -47,7 +47,7 @@ export default function ScorecardForm(props) {
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.sixteen} onChange={e => props.setSixteen(e.target.value)} /></td>
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.seventeen} onChange={e => props.setSeventeen(e.target.value)} /></td>
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.eighteen} onChange={e => props.setEighteen(e.target.value)} /></td>
-              <td><div className='w-7 border-2 border-black text-black text-center' type='number'>{props?.i}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white' type='number'>{props?.i}</div></td>
             </tr>
           </tbody>
         </table>

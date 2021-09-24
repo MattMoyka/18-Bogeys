@@ -60,9 +60,14 @@ export default function SearchGames() {
 
 
   return (
-    <div className='flex flex-row mb-5 justify-center gap-3'>
-      <input className='border-2 border-black text-black px-3' placeholder='Input player name' onChange={e => setSearchInput(e.target.value)}></input>
-      <button className='btn btn-secondary' onClick={openModal}>Search</button>
+    <div>
+      <div className='flex flex-row mb-5 justify-center gap-3'>
+        <input className=' rounded-lg shadow-2xl text-black px-3' placeholder='Search Player By Name' onChange={e => setSearchInput(e.target.value)}></input>
+        <button className='btn btn-secondary' onClick={openModal}>Search</button>
+      </div>
+      <div>
+        <div className='mb-5 text-2xl font-bold'>Select Game To View</div>
+      </div>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}

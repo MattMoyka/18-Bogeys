@@ -76,7 +76,7 @@ export default function ScorecardModal(props) {
 
 
   return (
-    <div className=' flex flex-col items-center pt-10 px-4 my-0'>
+    <div className=' flex flex-col items-center pt-5 px-4 my-0'>
 
       <ScorecardFormModal
         one={one}

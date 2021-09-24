@@ -4,7 +4,7 @@ export default function ScorecardFormModal(props) {
 
   return (
     <form className=" flex flex-col gap-4 items-center">
-      <div className="flex flex-col border-2 border-black bg-gray-100 rounded-xl p-3">
+      <div className="flex flex-col bg-blue-100 shadow-xl rounded-2xl p-3">
         <div className='text-2xl'>Front Nine</div>
         <table className='table-auto'>
           <thead>
@@ -15,16 +15,16 @@ export default function ScorecardFormModal(props) {
 
           <tbody>
             <tr>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.one}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.two}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.three}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.four}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.five}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.six}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.seven}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.eight}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.nine}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.o}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.one}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.two}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.three}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.four}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.five}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.six}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.seven}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.eight}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.nine}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.o}</div></td>
             </tr>
           </tbody>
         </table>
@@ -37,16 +37,16 @@ export default function ScorecardFormModal(props) {
           </thead>
           <tbody >
             <tr>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.ten}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.eleven}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.twelve}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.thirteen}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.fourteen}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.fifteen}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.sixteen}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.seventeen}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.eighteen}</div></td>
-              <td><div className='w-7 border-2 border-black text-black text-center'>{props?.i}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.ten}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.eleven}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.twelve}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.thirteen}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.fourteen}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.fifteen}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.sixteen}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.seventeen}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.eighteen}</div></td>
+              <td><div className='w-7 border-2 border-black text-black text-center bg-white'>{props?.i}</div></td>
             </tr>
           </tbody>
         </table>

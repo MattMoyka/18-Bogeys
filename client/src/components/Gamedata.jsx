@@ -26,7 +26,8 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     background: 'white',
     height: 'auto',
-    width: 'auto'
+    width: 'auto',
+    radius: '10px'
   },
 };
 Modal.setAppElement('#root');
@@ -62,17 +63,24 @@ export default function Gamedata() {
 
   return (
 
-    <div className='bg-white pt-5 h-screen'>
+    <div className='bg-white pt-5 h-full'>
       <SearchGames />
-      <div className='grid grid-cols-2 md:grid-cols-3'>
+      <div className='grid grid-cols-1 md:grid-cols-3'>
         {games.map(game => {
           return (
-            <div key={game?.id}>
-              <button onClick={openModal} id={game.id} className='w-10/12 h-10/12 bg-white hover:bg-green-900 shadow-2xl border-black gap-1 mb-5 mx-5 border-2 rounded-xl text-sm'>
-                <div id={game.id} className=''>
-                  <h3 id={game.id}>{game.fields.playerName}</h3>
-                  <h4 id={game.id}>{game.fields.courseName}</h4>
-                  <div id={game.id}>{game.fields.date}</div>
+            <div key={game?.id} className='flex justify-center p-3'>
+              <button onClick={openModal} id={game.id} className=' flex flex-row w-auto h-10/12 p-5 bg-blue-100 hover:bg-green-500 hover:text-white shadow-2xl border-black gap-1 mb-5 mx-5 border-2 rounded-xl text-sm'>
+                <div>
+                  <div className='p-1 font-semibold '>Player Name:</div>
+                  <div className='p-1 font-semibold '>CourseName:</div>
+                  <div className='p-1 font-semibold '>Date Played:</div>
+                </div>
+                <div>
+                  <div id={game.id}>
+                    <h3 id={game.id} className='p-1'>{game.fields.playerName}</h3>
+                    <h4 id={game.id} className='p-1'>{game.fields.courseName}</h4>
+                    <div id={game.id} className='p-1'>{game.fields.date}</div>
+                  </div>
                 </div>
               </button>
             </div>

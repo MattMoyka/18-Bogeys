@@ -34,15 +34,34 @@ export default function Scorecarddisplay(props) {
 
   return (
     <div className="flex flex-col items-center gap-1 text-lg rounded-xl py-5">
-      <div className='border-black border-2 p-5 rounded-xl shadow-2xl'>
-        <h1>{game.fields?.playerName}</h1>
-        <h1>{game.fields?.courseName}</h1>
-        <h1>{game.fields?.date}</h1>
-        {(game.fields?.otherPlayers !== undefined) ? <h1>Played with: {game.fields?.otherPlayers}</h1> : null}
-        <h1>Course par: {game.fields?.coursePar}</h1>
-        <h1>Front Nine par: {game.fields?.fninePar}</h1>
-        <h1>Back Nine par: {game.fields?.bninePar}</h1>
-        <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
+      <div className='mb-3 text-2xl font-bold'>Golf Round Data</div>
+      <div className='flex gap-2 bg-blue-100 p-5 rounded-xl shadow-2xl mb-5'>
+        <div>
+          <div className='p-1 font-semibold '>Player Name:</div>
+          <div className='p-1 font-semibold '>CourseName:</div>
+          <div className='p-1 font-semibold '>Date Played:</div>
+          {(game.fields?.otherPlayers !== undefined) ? <h1 className='p-1 font-semibold '>Played with:</h1> : null}
+        </div>
+        <div>
+          <h1 className='p-1'>{game.fields?.playerName}</h1>
+          <h1 className='p-1'>{game.fields?.courseName}</h1>
+          <h1 className='p-1'>{game.fields?.date}</h1>
+          {(game.fields?.otherPlayers !== undefined) ? <h1>Played with: {game.fields?.otherPlayers}</h1> : null}
+        </div>
+      </div>
+      <div className='flex gap-2 bg-blue-100 p-5 rounded-xl shadow-2xl'>
+        <div>
+          <div className='p-1 font-semibold '>Course par: </div>
+          <div className='p-1 font-semibold '>Front Nine par: </div>
+          <div className='p-1 font-semibold '>Back Nine par: </div>
+          <div className='p-1 font-semibold '> {game.fields?.playerName}'s score: </div>
+        </div>
+        <div>
+          <h1 className='p-1'>{game.fields?.coursePar}</h1>
+          <h1 className='p-1'>{game.fields?.fninePar}</h1>
+          <h1 className='p-1'>{game.fields?.bninePar}</h1>
+          <h1 className='p-1'>{game.fields?.total}</h1>
+        </div>
       </div>
       <ScorecardModal gameId={props?.gameId} />
       <input type='password' className='input input-success input-bordered w-10/12  mt-5 text-xxl text-center' placeholder='Enter password here to edit' onChange={e => setPasswordInput(e.target.value)} />
