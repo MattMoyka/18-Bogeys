@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'golf-course': "url('https://imgur.com/3HOYHSq.jpeg')"
+        'golf-course': "url('https://imgur.com/3HOYHSq.jpeg')",
+        'desktop-golf-course': "url('https://imgur.com/7iTDifc.png')"
       }
     },
   },
