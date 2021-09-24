@@ -22,6 +22,8 @@ export default function Newround() {
   const [otherPlayers, setOtherPlayers] = useState('')
   const [date, setDate] = useState('')
   const [password, setPassword] = useState('')
+  const [fninePar, setFninePar] = useState('')
+  const [bninePar, setBninePar] = useState('')
   const history = useHistory();
 
 
@@ -30,7 +32,7 @@ export default function Newround() {
     e.preventDefault();
     if (courseName !== '' && coursePar !== '' && playerName !== '' && date !== '' && password !== '') {
       const fields = {
-        courseName, coursePar, handicap, playerName, otherPlayers, date, password
+        courseName, coursePar, handicap, playerName, otherPlayers, date, password, fninePar, bninePar
       }
       const res = await axios.post(URL, { fields }, config);
       history?.push(`/newround/${res.data.id}/scorecard`)
@@ -55,6 +57,10 @@ export default function Newround() {
         setDate={setDate}
         password={password}
         setPassword={setPassword}
+        fninePar={fninePar}
+        setFninePar={setFninePar}
+        bninePar={bninePar}
+        setBninePar={setBninePar}
         handleSubmit={handleSubmit}
       />
     </div>

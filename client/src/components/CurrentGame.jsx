@@ -27,15 +27,18 @@ export default function CurrentGame(props) {
 
 
   return (
-    <div className='flex flex-col md:flex-row md:justify-center md:gap-16 md:items-start md:w-1/4 items-center text-lg mb-10 bg-gray-100 border-black border-2 rounded-lg shadow-2xl w-11/12'>
+    <div className='flex flex-col md:flex-row md:justify-center md:gap-10 md:items-start md:w-auto md:p-3 items-center text-lg mb-10 bg-gray-100 border-black border-2 rounded-lg shadow-2xl w-11/12'>
       <div>
         <h1>{game.fields?.playerName}</h1>
         <h1>{game.fields?.courseName}</h1>
         <h1>{game.fields?.date}</h1>
+        {(game.fields?.otherPlayers !== undefined) ? <h1>Played with: {game.fields?.otherPlayers}</h1> : null}
       </div>
       <div>
-        {(game.fields?.otherPlayers !== undefined) ? <h1>Played with: {game.fields?.otherPlayers}</h1> : null}
+
         <h1>Course par: {game.fields?.coursePar}</h1>
+        <h1>Front Nine Par: {game.fields?.fninePar}</h1>
+        <h1>Back Nine Par: {game.fields?.bninePar}</h1>
         <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
       </div>
     </div>

@@ -14,11 +14,26 @@ export default function NewroundForm(props) {
         </div>
         <div className='form-control'>
           <label className='label'>Course Par*:</label>
-          <input
-            className="input input-success input-bordered w-60"
-            type='text'
-            value={props.coursePar}
-            onChange={(e) => props.setCoursePar(e.target.value)} />
+          <div>
+            <input
+              className="input input-success input-bordered w-20"
+              type='text'
+              value={props.fninePar}
+              placeholder='Front'
+              onChange={(e) => props.setFninePar(e.target.value)} />
+            <input
+              className="input input-success input-bordered w-20"
+              type='text'
+              value={props.bninePar}
+              placeholder='Back'
+              onChange={(e) => props.setBninePar(e.target.value)} />
+            <input
+              className="input input-success input-bordered w-20"
+              type='text'
+              placeholder='Total'
+              value={props.coursePar}
+              onChange={(e) => props.setCoursePar(e.target.value)} />
+          </div>
         </div>
         <div className='form-control'>
           <label className='label'>Handicap:</label>
