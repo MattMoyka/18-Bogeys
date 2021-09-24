@@ -31,6 +31,8 @@ export default function ScorecardModal(props) {
   const [sixteen, setSixteen] = useState('')
   const [seventeen, setSeventeen] = useState('')
   const [eighteen, setEighteen] = useState('')
+  const [o, setO] = useState('')
+  const [i, setI] = useState('')
 
 
   useEffect(() => {
@@ -55,7 +57,8 @@ export default function ScorecardModal(props) {
       setSixteen(fields.sixteen);
       setSeventeen(fields.seventeen);
       setEighteen(fields.eighteen)
-
+      setO(fields?.fnineTotal)
+      setI(fields?.bnineTotal)
 
     }
     fetchGame();
@@ -112,7 +115,8 @@ export default function ScorecardModal(props) {
         setSeventeen={setSeventeen}
         eighteen={eighteen}
         setEighteen={setEighteen}
-
+        o={o}
+        i={i}
         handleSubmit={handleSubmit}
       />
     </div>
