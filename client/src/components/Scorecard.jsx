@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import CurrentGame from "./CurrentGame"
-import { useEffect } from "react/cjs/react.development"
+import { useEffect } from "react"
 import DeleteGame from "./DeleteGame"
 
 const airTableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -48,34 +48,34 @@ export default function Scorecard() {
     setToggle(!toggle)
   }
 
-  // useEffect(() => {
-  //   const fetchGame = async () => {
-  //     const res = await axios.get(`${URL}/${id}`, config);
-  //     const { fields } = res?.data;
-  //     setOne(fields?.one);
-  //     setTwo(fields?.two);
-  //     setThree(fields?.three);
-  //     setFour(fields?.four);
-  //     setFive(fields?.five);
-  //     setSix(fields?.six);
-  //     setSeven(fields?.seven);
-  //     setEight(fields?.eight);
-  //     setNine(fields?.nine);
-  //     setTen(fields?.ten);
-  //     setEleven(fields?.eleven);
-  //     setTwelve(fields?.twelve);
-  //     setThirteen(fields?.thirteen);
-  //     setFourteen(fields?.fourteen);
-  //     setFifteen(fields?.fifteen);
-  //     setSixteen(fields?.sixteen);
-  //     setSeventeen(fields?.seventeen);
-  //     setEighteen(fields?.eighteen)
+  useEffect(() => {
+    const fetchGame = async () => {
+      const res = await axios.get(`${URL}/${id}`, config);
+      const { fields } = res?.data;
+      setOne(fields?.one);
+      setTwo(fields?.two);
+      setThree(fields?.three);
+      setFour(fields?.four);
+      setFive(fields?.five);
+      setSix(fields?.six);
+      setSeven(fields?.seven);
+      setEight(fields?.eight);
+      setNine(fields?.nine);
+      setTen(fields?.ten);
+      setEleven(fields?.eleven);
+      setTwelve(fields?.twelve);
+      setThirteen(fields?.thirteen);
+      setFourteen(fields?.fourteen);
+      setFifteen(fields?.fifteen);
+      setSixteen(fields?.sixteen);
+      setSeventeen(fields?.seventeen);
+      setEighteen(fields?.eighteen)
 
 
-  //   }
-  //   fetchGame();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
+    }
+    fetchGame();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
 
 
