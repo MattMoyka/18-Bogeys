@@ -27,7 +27,7 @@ export default function CurrentGame(props) {
 
 
   return (
-    <div className='flex flex-col md:flex-row md:justify-center md:gap-16 md:items-start items-center text-lg mb-10 bg-gray-100 border-black border-2 rounded-lg shadow-2xl w-11/12'>
+    <div className='flex flex-col md:flex-row md:justify-center md:gap-16 md:items-start md:w-1/4 items-center text-lg mb-10 bg-gray-100 border-black border-2 rounded-lg shadow-2xl w-11/12'>
       <div>
         <h1>{game.fields?.playerName}</h1>
         <h1>{game.fields?.courseName}</h1>

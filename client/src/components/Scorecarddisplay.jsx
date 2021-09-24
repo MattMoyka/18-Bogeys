@@ -41,7 +41,7 @@ export default function Scorecarddisplay(props) {
       <h1>Course par: {game.fields?.coursePar}</h1>
       <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
       <ScorecardModal gameId={props?.gameId} />
-      <input type='password' className='input input-success input-bordered w-10/12 mt-5 text-xxl text-center' placeholder='Enter password here to edit' onChange={e => setPasswordInput(e.target.value)} />
+      <input type='password' className='input input-success input-bordered w-10/12 md:w-1/5 mt-5 text-xxl text-center' placeholder='Enter password here to edit' onChange={e => setPasswordInput(e.target.value)} />
       {(game.fields?.password === passwordInput) ?
         <Link to={`gamefeed/${game?.id}/edit`} className='btn btn-secondary btn-active' role="button" aria-pressed="true">Edit Game</Link> : <div></div>}
 
