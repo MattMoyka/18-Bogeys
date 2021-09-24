@@ -47,6 +47,7 @@ export default function DeleteGame(props) {
   async function handleDelete() {
 
     let res = await axios.delete(`${URL}/${id}`, config);
+    console.log(res)
     history.push('/gamefeed')
   }
 

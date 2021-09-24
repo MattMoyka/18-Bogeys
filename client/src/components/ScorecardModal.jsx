@@ -68,6 +68,7 @@ export default function ScorecardModal(props) {
       one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen
     }
     const res1 = await axios.patch(`${URL}/${props?.gameId}`, { fields }, config);
+    console.log(res1)
   }
 
 

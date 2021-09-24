@@ -31,7 +31,6 @@ Modal.setAppElement('#root');
 export default function SearchGames() {
   const [games, setGames] = useState([])
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [gameId, setGameId] = useState('')
   const [searchInput, setSearchInput] = useState('')
 
   function openModal(e) {
@@ -71,7 +70,7 @@ export default function SearchGames() {
         style={customStyles}
         contentLabel="Modal"
       >
-        <SearchGameReturn gameId={gameId} games={games} openModal={openModal} searchInput={searchInput} />
+        <SearchGameReturn games={games} openModal={openModal} searchInput={searchInput} />
 
       </Modal>
     </div>
