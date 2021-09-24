@@ -40,6 +40,8 @@ export default function Scorecarddisplay(props) {
         <h1>{game.fields?.date}</h1>
         {(game.fields?.otherPlayers !== undefined) ? <h1>Played with: {game.fields?.otherPlayers}</h1> : null}
         <h1>Course par: {game.fields?.coursePar}</h1>
+        <h1>Front Nine par: {game.fields?.fninePar}</h1>
+        <h1>Back Nine par: {game.fields?.bninePar}</h1>
         <h1> {game.fields?.playerName}'s score: {game.fields?.total}</h1>
       </div>
       <ScorecardModal gameId={props?.gameId} />
