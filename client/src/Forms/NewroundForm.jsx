@@ -3,7 +3,7 @@
 export default function NewroundForm(props) {
   return (
     <form onSubmit={props.handleSubmit} className="flex flex-col flex-nowrap items-center text-lg  h-screen bg-white">
-      <div>
+      <div className='md:grid md:grid-cols-2 md:grid-rows-3 md:gap-5'>
         <div className='form-control'>
           <label className='label'>Course Name*:</label>
           <input
@@ -28,8 +28,6 @@ export default function NewroundForm(props) {
             value={props.handicap}
             onChange={(e) => props.setHandicap(e.target.value)} />
         </div>
-      </div>
-      <div>
         <div className='form-control'>
           <label className='label'>Player Name*:</label>
           <input

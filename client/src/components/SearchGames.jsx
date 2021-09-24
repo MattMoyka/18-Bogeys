@@ -22,7 +22,7 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     background: 'white',
-    height: 'auto',
+    height: '70%',
     width: '90%'
   },
 };
