@@ -35,6 +35,8 @@ export default function Scorecard() {
   const [sixteen, setSixteen] = useState('')
   const [seventeen, setSeventeen] = useState('')
   const [eighteen, setEighteen] = useState('')
+  const [o, setO] = useState('')
+  const [i, setI] = useState('')
   const { id } = useParams()
   const [toggle, setToggle] = useState(false)
 
@@ -70,12 +72,14 @@ export default function Scorecard() {
       setSixteen(fields?.sixteen);
       setSeventeen(fields?.seventeen);
       setEighteen(fields?.eighteen)
+      setO(fields?.fnineTotal)
+      setI(fields?.bnineTotal)
 
 
     }
     fetchGame();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [toggle])
 
 
 
@@ -119,7 +123,8 @@ export default function Scorecard() {
         setSeventeen={setSeventeen}
         eighteen={eighteen}
         setEighteen={setEighteen}
-
+        o={o}
+        i={i}
         handleSubmit={handleSubmit}
       />
       <DeleteGame />

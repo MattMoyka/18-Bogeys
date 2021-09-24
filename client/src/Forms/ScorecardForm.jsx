@@ -10,7 +10,7 @@ export default function ScorecardForm(props) {
         <table className='table-auto'>
           <thead>
             <tr>
-              <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+              <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>O</th>
             </tr>
           </thead>
 
@@ -25,6 +25,7 @@ export default function ScorecardForm(props) {
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.seven} onChange={e => props.setSeven(e.target.value)} /></td>
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.eight} onChange={e => props.setEight(e.target.value)} /></td>
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.nine} onChange={e => props.setNine(e.target.value)} /></td>
+              <td><div className='w-7 border-2 border-black text-black text-center' type='number'>{props?.o}</div></td>
             </tr>
           </tbody>
         </table>
@@ -32,7 +33,7 @@ export default function ScorecardForm(props) {
         <table className='table-auto'>
           <thead>
             <tr>
-              <th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th>
+              <th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>I</th>
             </tr>
           </thead>
           <tbody >
@@ -46,6 +47,7 @@ export default function ScorecardForm(props) {
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.sixteen} onChange={e => props.setSixteen(e.target.value)} /></td>
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.seventeen} onChange={e => props.setSeventeen(e.target.value)} /></td>
               <td><input className='w-7 border-2 border-black text-black text-center' type='number' value={props?.eighteen} onChange={e => props.setEighteen(e.target.value)} /></td>
+              <td><div className='w-7 border-2 border-black text-black text-center' type='number'>{props?.i}</div></td>
             </tr>
           </tbody>
         </table>
