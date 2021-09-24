@@ -26,7 +26,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     background: 'white',
     height: 'auto',
-    width: '90%'
+    width: 'auto'
   },
 };
 Modal.setAppElement('#root');
