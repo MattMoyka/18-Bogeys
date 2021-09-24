@@ -49,7 +49,8 @@ export default function NewroundForm(props) {
           <label className="label">Date*:</label>
           <input
             className="input input-success input-bordered w-60"
-            type='text'
+            type='date'
+            autoComplete='on'
             value={props.date}
             onChange={(e) => props.setDate(e.target.value)} />
         </div>
