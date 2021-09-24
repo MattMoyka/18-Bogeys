@@ -4,7 +4,7 @@ export default function SearchGameReturn(props) {
 
   return (
     <div className='bg-white text-black'>
-      <div className='grid grid-cols-1'>
+      <div className='grid grid-cols-1 md:grid-cols-2'>
         {props.games.map(game => {
           if (game.fields?.playerName.toLowerCase() === props.searchInput.toLowerCase()) {
             return (
