@@ -17,19 +17,19 @@ export default function NewroundForm(props) {
           <div>
             <input
               className="input input-success input-bordered w-20"
-              type='text'
+              type='number'
               value={props.fninePar}
               placeholder='Front'
               onChange={(e) => props.setFninePar(e.target.value)} />
             <input
               className="input input-success input-bordered w-20"
-              type='text'
+              type='number'
               value={props.bninePar}
               placeholder='Back'
               onChange={(e) => props.setBninePar(e.target.value)} />
             <input
               className="input input-success input-bordered w-20"
-              type='text'
+              type='number'
               placeholder='Total'
               value={props.coursePar}
               onChange={(e) => props.setCoursePar(e.target.value)} />
@@ -39,7 +39,7 @@ export default function NewroundForm(props) {
           <label className='label'>Handicap:</label>
           <input
             className="input input-success input-bordered w-60"
-            type='text'
+            type='number'
             value={props.handicap}
             onChange={(e) => props.setHandicap(e.target.value)} />
         </div>
