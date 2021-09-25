@@ -35,7 +35,7 @@ export default function Scorecarddisplay(props) {
   return (
     <div>
       <div className='mb-3 text-3xl font-bold'>Golf Round Data</div>
-      <div className='flex gap-2'>
+      <div className='md:flex gap-2'>
 
         <div className="flex flex-col items-center gap-1 text-lg rounded-xl py-5">
           <div className='flex gap-2 bg-blue-100 p-5 rounded-xl shadow-2xl mb-5'>
@@ -73,6 +73,7 @@ export default function Scorecarddisplay(props) {
         </div>
         <ScorecardModal gameId={props?.gameId} />
       </div>
+
     </div>
   )
 }
