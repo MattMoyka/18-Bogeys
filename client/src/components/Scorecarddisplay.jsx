@@ -34,7 +34,7 @@ export default function Scorecarddisplay(props) {
 
   return (
     <div className="flex flex-col items-center gap-1 text-lg rounded-xl py-5">
-      <div className='mb-3 text-2xl font-bold'>Golf Round Data</div>
+      <div className='mb-3 text-3xl font-bold'>Golf Round Data</div>
       <div className='flex gap-2 bg-blue-100 p-5 rounded-xl shadow-2xl mb-5'>
         <div>
           <div className='p-1 font-semibold '>Player Name:</div>

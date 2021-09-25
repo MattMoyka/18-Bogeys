@@ -5,6 +5,7 @@ export default function ScorecardFormModal(props) {
   return (
     <form className=" flex flex-col gap-4 items-center">
       <div className="flex flex-col bg-blue-100 shadow-xl rounded-2xl p-3">
+        <div className='text-3xl font-bold text-center'>Scorecard</div>
         <div className='text-2xl'>Front Nine</div>
         <table className='table-auto'>
           <thead>

@@ -39,24 +39,24 @@ export default function ScorecardModal(props) {
     const fetchGame = async () => {
       const res = await axios.get(`${URL}/${props?.gameId}`, config);
       const { fields } = res.data;
-      setOne(fields.one);
-      setTwo(fields.two);
-      setThree(fields.three);
-      setFour(fields.four);
-      setFive(fields.five);
-      setSix(fields.six);
-      setSeven(fields.seven);
-      setEight(fields.eight);
-      setNine(fields.nine);
-      setTen(fields.ten);
-      setEleven(fields.eleven);
-      setTwelve(fields.twelve);
-      setThirteen(fields.thirteen);
-      setFourteen(fields.fourteen);
-      setFifteen(fields.fifteen);
-      setSixteen(fields.sixteen);
-      setSeventeen(fields.seventeen);
-      setEighteen(fields.eighteen)
+      setOne(fields?.one);
+      setTwo(fields?.two);
+      setThree(fields?.three);
+      setFour(fields?.four);
+      setFive(fields?.five);
+      setSix(fields?.six);
+      setSeven(fields?.seven);
+      setEight(fields?.eight);
+      setNine(fields?.nine);
+      setTen(fields?.ten);
+      setEleven(fields?.eleven);
+      setTwelve(fields?.twelve);
+      setThirteen(fields?.thirteen);
+      setFourteen(fields?.fourteen);
+      setFifteen(fields?.fifteen);
+      setSixteen(fields?.sixteen);
+      setSeventeen(fields?.seventeen);
+      setEighteen(fields?.eighteen)
       setO(fields?.fnineTotal)
       setI(fields?.bnineTotal)
 
