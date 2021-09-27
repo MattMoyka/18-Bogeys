@@ -69,7 +69,7 @@ export default function Gamedata() {
         {games.map(game => {
           return (
             <div key={game?.id} className='flex justify-center p-3'>
-              <button onClick={openModal} id={game.id} className=' flex flex-row w-auto h-10/12 p-5 bg-blue-100 hover:bg-green-500 hover:text-white shadow-2xl border-black gap-1 mb-5 mx-5 border-2 rounded-xl text-sm'>
+              <button onClick={openModal} id={game.id} className=' flex flex-row w-auto h-10/12 p-5 bg-blue-100 hover:bg-green-500 hover:text-white shadow-2xl  gap-1 mb-5 mx-5 border-2 rounded-xl text-sm'>
                 <div>
                   <div id={game.id} className='p-1 font-semibold '>Player Name:</div>
                   <div id={game.id} className='p-1 font-semibold '>CourseName:</div>
