@@ -52,7 +52,7 @@ export default function Scorecarddisplay(props) {
               <h1 className='p-1'>{game.fields?.playerName}</h1>
               <h1 className='p-1'>{game.fields?.courseName}</h1>
               <h1 className='p-1'>{game.fields?.date}</h1>
-              {(game.fields?.otherPlayers !== undefined) ? <h1>Played with: {game.fields?.otherPlayers}</h1> : null}
+              {(game.fields?.otherPlayers !== undefined) ? <h1>{game.fields?.otherPlayers}</h1> : null}
             </div>
           </div>
           <div className='flex gap-2 bg-blue-100 p-5 rounded-xl shadow-2xl'>
