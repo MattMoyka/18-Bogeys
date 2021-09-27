@@ -34,7 +34,10 @@ export default function Scorecarddisplay(props) {
 
   return (
     <div>
-      <div className='mb-3 text-3xl font-bold'>Golf Round Data</div>
+      <div className='flex justify-between mr-5'>
+        <div className='mb-3 text-3xl font-bold'>Golf Round Data</div>
+        <button onClick={props.closeModal} className='flex justify-center items-center p-3 bg-black text-white h-9 rounded-lg'>X</button>
+      </div>
       <div className='md:flex gap-2'>
 
         <div className="flex flex-col items-center gap-1 text-lg rounded-xl py-5">
@@ -66,7 +69,7 @@ export default function Scorecarddisplay(props) {
               <h1 className='p-1'>{game.fields?.total}</h1>
             </div>
           </div>
-          <input type='password' className='input input-success input-bordered w-10/12  mt-5 text-xxl text-center' placeholder='Enter password here to edit' onChange={e => setPasswordInput(e.target.value)} />
+          <input type='password' className='input input-success input-bordered w-10/12  mt-5 text-xxl text-center' placeholder='Edit scorecard password' onChange={e => setPasswordInput(e.target.value)} />
           {(game.fields?.password === passwordInput) ?
             <Link to={`gamefeed/${game?.id}/edit`} className='btn btn-secondary btn-active' role="button" aria-pressed="true">Edit Game</Link> : <div></div>}
 

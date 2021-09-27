@@ -75,7 +75,7 @@ export default function SearchGames() {
         style={customStyles}
         contentLabel="Modal"
       >
-        <SearchGameReturn games={games} openModal={openModal} searchInput={searchInput} />
+        <SearchGameReturn games={games} openModal={openModal} closeModal={closeModal} searchInput={searchInput} />
 
       </Modal>
     </div>

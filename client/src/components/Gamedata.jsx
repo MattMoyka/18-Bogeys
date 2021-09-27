@@ -71,9 +71,9 @@ export default function Gamedata() {
             <div key={game?.id} className='flex justify-center p-3'>
               <button onClick={openModal} id={game.id} className=' flex flex-row w-auto h-10/12 p-5 bg-blue-100 hover:bg-green-500 hover:text-white shadow-2xl border-black gap-1 mb-5 mx-5 border-2 rounded-xl text-sm'>
                 <div>
-                  <div className='p-1 font-semibold '>Player Name:</div>
-                  <div className='p-1 font-semibold '>CourseName:</div>
-                  <div className='p-1 font-semibold '>Date Played:</div>
+                  <div id={game.id} className='p-1 font-semibold '>Player Name:</div>
+                  <div id={game.id} className='p-1 font-semibold '>CourseName:</div>
+                  <div id={game.id} className='p-1 font-semibold '>Date Played:</div>
                 </div>
                 <div>
                   <div id={game.id}>
@@ -93,7 +93,7 @@ export default function Gamedata() {
         style={customStyles}
         contentLabel="Modal"
       >
-        <Scorecarddisplay gameId={gameId} />
+        <Scorecarddisplay gameId={gameId} closeModal={closeModal} />
 
       </Modal>
     </div >
