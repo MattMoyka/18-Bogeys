@@ -29,7 +29,7 @@ export default function CurrentGame(props) {
   return (
     <div>
       <div className='mb-3 text-3xl font-bold'>Golf Round Data</div>
-      <div className='flex flex-col md:flex-row md:justify-center md:gap-10 md:items-start md:w-auto md:p-3 p-3 text-left text-lg mb-10 bg-blue-100 border-black border-2 rounded-lg shadow-2xl w-11/12'>
+      <div className='flex flex-col md:flex-row md:justify-center md:gap-10 md:items-start md:w-auto md:p-3 p-3 text-left text-lg mb-10 bg-blue-100 border-black border-2 rounded-lg shadow-2xl w-auto'>
 
         <div className='flex gap-2'>
           <div>
