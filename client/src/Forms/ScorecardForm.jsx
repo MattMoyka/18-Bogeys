@@ -5,7 +5,7 @@ export default function ScorecardForm(props) {
 
   return (
     <form onSubmit={props.handleSubmit} className=" flex flex-col gap-4 items-center">
-      <div className="flex flex-col border-2 border-black bg-blue-100 rounded-xl p-3">
+      <div className="flex flex-col border-2 shadow-2xl bg-blue-100 rounded-xl p-3">
         <div className='text-2xl'>Front Nine</div>
         <table className='table-auto'>
           <thead>

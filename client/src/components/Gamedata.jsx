@@ -65,7 +65,7 @@ export default function Gamedata() {
 
     <div className='bg-white pt-5 h-full'>
       <SearchGames />
-      <div className='grid grid-cols-1 md:grid-cols-3'>
+      <div className='grid grid-cols-1 md:grid-cols-3 '>
         {games.map(game => {
           return (
             <div key={game?.id} className='flex justify-center p-3'>
