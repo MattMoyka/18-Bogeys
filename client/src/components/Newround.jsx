@@ -41,7 +41,7 @@ export default function Newround() {
   }
 
   return (
-    <div className="h-screen flex flex-col justify-center">
+    <div className="h-full flex flex-col justify-center">
       <NewroundForm
         courseName={courseName}
         setCourseName={setCourseName}
