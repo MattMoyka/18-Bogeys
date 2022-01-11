@@ -1,14 +1,24 @@
 # 18-Bogeys
 
-[Link to project here](https://main--unruffled-haibt-df0e79.netlify.app/)
+# [Link to project here](https://18bogeys.netlify.app/)
 
 ## Project Description
 
 18 Bogeys is a golf round tracker that records various info about your golf game. It will record the course name and par, your name, handicap an the other players you are playing with as well as the date played. In addition you will fill in the scorecard as you play and at the end of the game you will submit it to a global feed.
 
+## Final Project View
+
+### Landing Page
+![landing](readmeimg/landing.png)
+### New Round Creation
+![newround](readmeimg/newround.png)
+### Round Data
+![round data](readmeimg/rounddata.png)
+
+
 ## Wireframes
 
-The wireframes below depict the phone and website view for the app as well as the flowchart to depicte the component Hierarchy. [View the source here.](https://whimsical.com/18-bogeys-MaEEdCsgf13WMQCcW74rcKß)
+The wireframes below depict the phone and website view for the app as well as the flowchart to depicte the component Hierarchy. Disclaimer, as seen above the final website have changed overtime and the wireframes haven't been updated. [View the source here.](https://whimsical.com/18-bogeys-MaEEdCsgf13WMQCcW74rcKß)
 
 ![imageAlt](https://imgur.com/P8SbGZF.png)
 ![imageAlt](https://imgur.com/k2C8BBO.png)
